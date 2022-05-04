@@ -4,22 +4,22 @@
       <router-view></router-view>
     </keep-alive>
     <tab-bar class="tab-bar">
-      <tab-bar-item path="/home" activeColor="red">
+      <tab-bar-item path="/home" activeColor="#fd2656">
         <img slot="item-icon" src="./assets/img/tabbar/home.svg" alt="">
         <img slot="item-icon-active" src="./assets/img/tabbar/home-active.svg" alt="">
         <div slot="item-text">首页</div>
       </tab-bar-item>
-      <tab-bar-item path="/category" activeColor="red">
-        <img slot="item-icon" src="./assets/img/tabbar/fenlei.svg" alt="">
-        <img slot="item-icon-active" src="./assets/img/tabbar/fenlei-active.svg" alt="">
+      <tab-bar-item path="/category" activeColor="#fd2656">
+        <img slot="item-icon" src="./assets/img/tabbar/category.svg" alt="">
+        <img slot="item-icon-active" src="./assets/img/tabbar/category-active.svg" alt="">
         <div slot="item-text">分类</div>
       </tab-bar-item>
-      <tab-bar-item path="/cart" activeColor="red">
+      <tab-bar-item path="/cart" activeColor="#fd2656">
         <img slot="item-icon" src="./assets/img/tabbar/shop.svg" alt="">
         <img slot="item-icon-active" src="./assets/img/tabbar/shop-active.svg" alt="">
         <div slot="item-text">购物车</div>
       </tab-bar-item>
-      <tab-bar-item path=/profile activeColor="red">
+      <tab-bar-item path=/profile activeColor="#fd2656">
         <img slot="item-icon" src="./assets/img/tabbar/me.svg" alt="">
         <img slot="item-icon-active" src="./assets/img/tabbar/me-active.svg" alt="">
         <div slot="item-text">我的</div>

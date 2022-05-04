@@ -156,6 +156,7 @@ export default {
 
   .home-bar{
     background-color: var(--color-tint);
+    font-weight: 700;
     color: #fff;
 
     /* position: fixed;//使用原生滚动时使用的
