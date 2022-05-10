@@ -1,12 +1,12 @@
 <template>
   <div>
-    <nav-bar class="home-bar">
+    <nav-bar class="cart-bar">
       <div slot="center">购物车({{ cartLength }})</div>
     </nav-bar>
-    <scroll class="content" ref="scroll">
+    <scroll class="content" :pull-up-load="true" ref="scroll">
       <cart-list></cart-list>
     </scroll>
-    <cart-bottom-bar class="bar"> </cart-bottom-bar>
+    <cart-bottom-bar class="bar" v-show="cartLength"> </cart-bottom-bar>
   </div>
 </template>
 
@@ -30,14 +30,11 @@ export default {
   computed: {
     ...mapGetters(["cartLength"]),
   },
-  activated() {
-    this.$refs.scroll.refresh();
-  },
 };
 </script>
 
 <style scoped>
-.home-bar {
+.cart-bar {
   background-color: var(--color-tint);
   font-weight: 700;
   color: #fff;

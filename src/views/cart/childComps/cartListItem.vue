@@ -1,12 +1,7 @@
 <template>
   <div class="shop-item">
     <div class="selector">
-      <img
-        :class="{ checked: product.checked }"
-        alt=""
-        srcset=""
-        @click="changeSelector"
-      />
+      <img :class="{ checked: product.checked }" @click="changeSelector" />
     </div>
     <div class="item-img">
       <img :src="product.image" alt="商品图片" />
@@ -93,8 +88,8 @@ export default {
   padding: 5px;
 }
 .item-img img {
-  width: 80px;
-  height: 100px;
+  width: 65px;
+  height: 90px;
   display: block;
   border-radius: 5px;
 }

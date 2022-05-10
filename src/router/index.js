@@ -5,38 +5,43 @@ import Category from '../views/category/category'
 import Cart from '../views/cart/cart'
 import Profile from '../views/profile/profile'
 import Detail from '../views/detail/detail'
+import Login from '../views/login/login'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path:'',
-    redirect:'/home'
+    path: '',
+    redirect: '/home'
   },
   {
-    path:'/home',
-    component:Home
+    path: '/home',
+    component: Home
   },
   {
-    path:'/category',
-    component:Category
+    path: '/category',
+    component: Category
   },
   {
-    path:'/cart',
-    component:Cart
+    path: '/cart',
+    component: Cart
   },
   {
-    path:'/profile',
-    component:Profile
+    path: '/profile',
+    component: Profile
   },
   {
-    path:'/detail/:iid',
+    path: '/detail/:iid',
     component: Detail
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 const router = new VueRouter({
   routes,
-  mode:'history'
+  mode: 'history'
 })
 
 export default router

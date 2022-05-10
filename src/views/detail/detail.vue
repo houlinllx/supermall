@@ -29,14 +29,14 @@ import DetailButtomBar from "./childComps/DetailButtomBar.vue";
 
 import Scroll from "@/components/content/scroll/Scroll";
 import GoodsList from "@/components/content/goods/GoodsList";
-
+import { debounce } from "@/common/utils";
 import {
   getDetail,
   getRecommend,
   Goods,
   Shop,
   GoodsParam,
-} from "../../network/detail";
+} from "@/network/detail";
 
 export default {
   name: "Detail",
@@ -98,6 +98,12 @@ export default {
       // console.log(res);
       this.recommend = res.data.list;
       // console.log(this.recommend)
+    });
+  },
+  mounted() {
+    const refresh = debounce(this.$refs.scroll.refresh, 10);
+    this.$bus.$on("itemImageLoad", () => {
+      refresh();
     });
   },
   methods: {
